@@ -1,0 +1,52 @@
+<h1>Siga Fatec</h1>
+<ngb-alert [dismissible]="false">
+  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</ngb-alert>
+
+<div class="container bg-light p-4">
+  <div class="row">
+    <div class="col-7 m-auto">
+      <h1 class="text-center">Cadastro de Aluno:</h1>
+      <form [formGroup]="formGroupStudent">
+        <div class="mb-3">
+          <label for="matricula" class="form-label">Matrícula</label>
+          <input type="text" class="form-control" formControlName="id" />
+          <div id="Matrícula" class="form-text">
+            Essa informação é confidencial.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" formControlName="name" />
+          <div id="emailHelp" class="form-text">
+            Essa informação é confidencial.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="curso" class="form-label">Curso</label>
+          <input type="text" class="form-control" formControlName="course" />
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="save()" >Salvar</button>
+      </form>
+      <h2 class="text-center">Alunos:</h2>
+      <div class="mt-4">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Matrícula</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Curso</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of students">
+              <th scope="row">{{ s.id }}</th>
+              <td>{{ s.name }}</td>
+              <td>{{ s.course }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
