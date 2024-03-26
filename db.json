@@ -1,0 +1,8 @@
+{
+    "students": [
+      { "id": 0, "name": "Enzo Queiroz", "course": "Análise de Sistemas" },
+      { "id": 1, "name": "Gabriela Amoroso", "course": "Medicina" },
+      { "id": 2, "name": "Paulo Henrique", "course": "Cinema" }
+    ]
+  }
+  
