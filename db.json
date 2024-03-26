@@ -1,8 +1,29 @@
 {
-    "students": [
-      { "id": 0, "name": "Enzo Queiroz", "course": "Análise de Sistemas" },
-      { "id": 1, "name": "Gabriela Amoroso", "course": "Medicina" },
-      { "id": 2, "name": "Paulo Henrique", "course": "Cinema" }
-    ]
-  }
-  
+  "students": [
+    {
+      "id": 0,
+      "name": "Enzo Queiroz",
+      "course": "Análise de Sistemas"
+    },
+    {
+      "id": 1,
+      "name": "Gabriela Amoroso",
+      "course": "Medicina"
+    },
+    {
+      "id": 2,
+      "name": "Paulo Henrique",
+      "course": "Cinema"
+    },
+    {
+      "id": "3",
+      "name": "Igor Petrin",
+      "course": "Mídias Digitais"
+    },
+    {
+      "id": 4,
+      "name": "Pedro Bernardo",
+      "course": "RH"
+    }
+  ]
+}
