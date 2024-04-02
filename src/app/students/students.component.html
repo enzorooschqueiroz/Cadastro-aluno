@@ -34,7 +34,7 @@
               <td>{{ s.name }}</td>
               <td>{{ s.course }}</td>
               <td class="d-flex justify-content-evenly">
-                <button type="submit" class="btn btn-secondary">Editar</button>
+                <button type="submit" class="btn btn-secondary" (click)="edit(s)">Editar</button>
                 <button type="submit" class="btn btn-danger" (click)="delete(s)">Remover</button>
               </td>
             </tr>
