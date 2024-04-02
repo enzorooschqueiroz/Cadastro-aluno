@@ -5,13 +5,6 @@
       <h1 class="text-center">Cadastro de Aluno:</h1>
       <form [formGroup]="formGroupStudent">
         <div class="mb-3">
-          <label for="matricula" class="form-label">Matrícula</label>
-          <input type="number" class="form-control" formControlName="id" />
-          <div id="Matrícula" class="form-text">
-            Essa informação é confidencial.
-          </div>
-        </div>
-        <div class="mb-3">
           <label for="nome" class="form-label">Nome</label>
           <input type="text" class="form-control" formControlName="name" />
           <div id="emailHelp" class="form-text">
@@ -32,6 +25,7 @@
               <th scope="col">Matrícula</th>
               <th scope="col">Nome</th>
               <th scope="col">Curso</th>
+              <th class="d-flex justify-content-evenly" scope="col">Opções</th>
             </tr>
           </thead>
           <tbody>
@@ -39,6 +33,10 @@
               <th scope="row">{{ s.id }}</th>
               <td>{{ s.name }}</td>
               <td>{{ s.course }}</td>
+              <td class="d-flex justify-content-evenly">
+                <button type="submit" class="btn btn-secondary">Editar</button>
+                <button type="submit" class="btn btn-danger" (click)="delete(s)">Remover</button>
+              </td>
             </tr>
           </tbody>
         </table>
