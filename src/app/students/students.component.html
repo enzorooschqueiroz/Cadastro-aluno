@@ -10,12 +10,23 @@
           <div id="emailHelp" class="form-text">
             Essa informação é confidencial.
           </div>
+          <small *ngIf="submitted && name.hasError('minlength')" class="text-danger">
+            *o nome tem que ter no mínimo 3 caracteres!
+          </small>
+          <small *ngIf="submitted && name.hasError('required')" class="text-danger">
+            *o nome é requerido
+          </small>
         </div>
         <div class="mb-3">
           <label for="curso" class="form-label">Curso</label>
           <input type="text" class="form-control" formControlName="course" />
+          <small *ngIf="submitted && course.hasError('required')" class="text-danger">
+            *o curso é requerido!
+          </small>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="save()" >Salvar</button>
+        <button type="submit" class="btn btn-primary" (click)="save()">
+          Salvar
+        </button>
       </form>
       <h2 class="text-center">Alunos:</h2>
       <div class="mt-4">
@@ -34,8 +45,20 @@
               <td>{{ s.name }}</td>
               <td>{{ s.course }}</td>
               <td class="d-flex justify-content-evenly">
-                <button type="submit" class="btn btn-secondary" (click)="edit(s)">Editar</button>
-                <button type="submit" class="btn btn-danger" (click)="delete(s)">Remover</button>
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                  (click)="edit(s)"
+                >
+                  Editar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-danger"
+                  (click)="delete(s)"
+                >
+                  Remover
+                </button>
               </td>
             </tr>
           </tbody>
